@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:socail_media_app/view/screens/bottom_nav_screen/Bottom_Navigation_Bar.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-
-void main() {
+void main() async {
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -15,15 +17,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:const BottomNavigationBarInFlutter (),
+      home: const BottomNavigationBarInFlutter(),
     );
   }
 }
-
-
-
-

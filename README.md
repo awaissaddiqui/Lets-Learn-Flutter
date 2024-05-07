@@ -1,16 +1,35 @@
-# socail_media_app
+# Firebase and Flutter Configuration
 
-A new Flutter project.
+## Step 01 Node.js Installation:
 
-## Getting Started
+Download and Install node js frome <a href="https://nodejs.org/en/download">here</a> for npm and add to your system path.
 
-This project is a starting point for a Flutter application.
+## Step 02 Firebase Project Creation:
+Create a Firebase project <a href="https://console.firebase.google.com/">Firebase Login </a>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Step 03 Firebase CLI:
+``` npm install -g firebase-tools ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Step 04  Installing FlutterFire CLI:
+
+Install the FlutterFire CLI
+
+```  dart pub global activate flutterfire_cli ```
+
+## Step 05 Configuring Dependencies: 
+
+
+``` flutter pub add firebase_core ```
+``` flutter pub add firebase_auth ```
+``` flutter pub add cloud_firestore ```
+``` flutter pub add provider ```
+``` flutter pub add firebase_ui_auth ```
+
+## Step 06 Running
+
+``` firebase login ```
+
+## Step 07 Running
+```  flutterfire configure ``` 
+Try to use command prompt .

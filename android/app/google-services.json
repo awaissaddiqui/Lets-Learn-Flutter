@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "36814291123",
+    "project_id": "getstartwfb",
+    "storage_bucket": "getstartwfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36814291123:android:82136c498ea9001618b0c6",
+        "android_client_info": {
+          "package_name": "com.example.socail_media_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrS6ZhOUTdaT9dHb-82tGL-crPfRemOwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -20,11 +20,15 @@ Install the FlutterFire CLI
 ## Step 05 Configuring Dependencies: 
 
 
-``` flutter pub add firebase_core ```
-``` flutter pub add firebase_auth ```
-``` flutter pub add cloud_firestore ```
-``` flutter pub add provider ```
-``` flutter pub add firebase_ui_auth ```
+```flutter pub add firebase_core```
+
+```flutter pub add firebase_auth```
+
+```flutter pub add cloud_firestore```
+
+```flutter pub add provider```
+
+```flutter pub add firebase_ui_auth```
 
 ## Step 06 Running
 

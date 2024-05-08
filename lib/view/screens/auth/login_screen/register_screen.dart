@@ -1,24 +1,21 @@
-import 'dart:js';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:socail_media_app/view/screens/auth/dashboard.dart';
-import 'package:socail_media_app/view/screens/auth/login_screen/register_screen.dart';
+import 'package:flutter/services.dart';
+import 'package:socail_media_app/view/screens/auth/login_screen/login_screen.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   FirebaseAuth firebaseAuth = FirebaseAuth.instance;
-  String _errorMessage = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +24,10 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Login ",
-                style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+            Text(
+              "Registration Form ",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
             SizedBox(
               height: 20,
             ),
@@ -43,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 10.0),
+            SizedBox(height: 20.0),
             TextField(
               controller: _passwordController,
               obscureText: true,
@@ -56,40 +55,26 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             SizedBox(
-              height: 7,
-            ),
-            Text(
-              _errorMessage,
-              style: TextStyle(color: Colors.red),
-            ),
-            SizedBox(
-              height: 7,
+              height: 16,
             ),
             ElevatedButton(
               onPressed: () async {
-                // Implement login functionality here
-                try {
-                  UserCredential userCredential =
-                      await firebaseAuth.signInWithEmailAndPassword(
-                          email: _emailController.text,
-                          password: _passwordController.text);
-                  if (userCredential.user != null) {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return MyDashboard();
-                        },
-                      ),
-                    );
-                  }
-                } on FirebaseAuthException catch (e) {
-                  setState(() {
-                    _errorMessage = e.message!;
-                  });
+                UserCredential userCredential =
+                    await firebaseAuth.createUserWithEmailAndPassword(
+                        email: _emailController.text,
+                        password: _passwordController.text);
+                if (userCredential.user != null) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return LoginScreen();
+                      },
+                    ),
+                  );
                 }
               },
-              child: Text('Login'),
+              child: Text('Register'),
             ),
             SizedBox(
               height: 10,
@@ -100,15 +85,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return SignUpScreen();
+                        return LoginScreen();
                       },
                     ),
                   );
                 },
-                child: Text("Sign Up")),
+                child: Text("Login")),
           ],
         ),
       ),
     );
+    ;
   }
 }

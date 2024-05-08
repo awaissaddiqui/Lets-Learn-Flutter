@@ -37,3 +37,14 @@ Install the FlutterFire CLI
 ## Step 07 Running
 ```  flutterfire configure ``` 
 Try to use command prompt .
+
+
+# Output 
+
+## Todo App 
+
+<img src="./ouput_Pics/login.png" />
+<img src="/ouput_Pics/register.png" />
+<img src="/ouput_Pics/dashboard.png" />
+<img src="./ouput_Pics/delete.png" />
+<img src="./ouput_Pics/success.png" />

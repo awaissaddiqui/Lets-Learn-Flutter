@@ -43,8 +43,9 @@ Try to use command prompt .
 
 ## Todo App 
 
-<img src="./ouput_Pics/login.png" />
+<!-- <img src="./ouput_Pics/login.png" />
 <img src="/ouput_Pics/register.png" />
 <img src="/ouput_Pics/dashboard.png" />
 <img src="./ouput_Pics/delete.png" />
-<img src="./ouput_Pics/success.png" />
+<img src="./ouput_Pics/success.png" /> -->
+![Login](./ouput_Pics/login.png) ![Register](/ouput_Pics/register.png) ![Dashboard](/ouput_Pics/dashboard.png) ![Delete](./ouput_Pics/delete.png) ![Success](./ouput_Pics/success.png)
